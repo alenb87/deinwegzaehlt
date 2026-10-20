@@ -247,6 +247,14 @@
     /* Hero without missing-image placeholder */
     .hero-grid { grid-template-columns: 1fr; max-width: 920px; }
     @media (max-width: 980px) { .hero-grid { grid-template-columns: 1fr; } }
+
+    /* Mobile opening fix for newspaper image */
+    .memory-frame a { position: relative; z-index: 2; cursor: zoom-in; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+    .memory-frame img { pointer-events: none; }
+    @media (max-width: 650px) {
+      .memory-frame a { display: block; width: 100%; }
+      .memory-frame img { width: 100%; height: auto; }
+    }
 </style>
 </head>
 <body>
@@ -293,8 +301,8 @@
 <p>Für mich steht dieser Ausschnitt nicht nur für Fußball, sondern auch für Teamgeist, Einsatz und die Erfahrung, gemeinsam auf ein Ziel hinzuarbeiten.</p>
 </div>
 <figure class="memory-frame reveal">
-<a href="uhlandschule-fussball-zeitung.png" rel="noopener" target="_blank">
-<img alt="Historischer Zeitungsartikel über die Schulmannschaft der Uhlandschule bei einem Fußballturnier" loading="lazy" src="uhlandschule-fussball-zeitung.png"/>
+<a aria-label="Zeitungsartikel in voller Größe öffnen" href="Uhlandschule Fussball Zeitung.png" rel="noopener" target="_blank">
+<img alt="Historischer Zeitungsartikel über die Schulmannschaft der Uhlandschule bei einem Fußballturnier" loading="lazy" src="Uhlandschule Fussball Zeitung.png"/>
 </a>
 <figcaption>Zeitungsausschnitt aus meiner Schulzeit an der Uhlandschule. Zum Vergrößern anklicken.</figcaption>
 </figure>
