@@ -188,6 +188,26 @@
     /* Animations */
     .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.visible { opacity: 1; transform: none; }
+    /* Zeitungsartikel */
+    .memory { background: var(--cream); }
+    .memory-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 54px; align-items: center; margin-top: 46px; }
+    .memory-copy { max-width: 520px; }
+    .memory-copy h3 { font-size: clamp(1.65rem, 3vw, 2.5rem); line-height: 1.12; margin-bottom: 18px; }
+    .memory-copy p { color: var(--text-soft); font-size: 1.05rem; margin-top: 14px; }
+    .memory-frame { margin: 0; background: var(--cream-light); border: 1px solid rgba(61,36,24,.1); border-radius: 28px; padding: 16px; box-shadow: var(--shadow); }
+    .memory-frame a { display: block; text-decoration: none; }
+    .memory-frame img { width: 100%; height: auto; border-radius: 18px; }
+    .memory-frame figcaption { color: var(--text-soft); font-size: .88rem; padding: 14px 4px 2px; }
+    @media (max-width: 980px) {
+      .memory-grid { grid-template-columns: 1fr; gap: 30px; }
+      .memory-copy { max-width: 760px; }
+    }
+    @media (max-width: 650px) {
+      .memory-grid { margin-top: 32px; gap: 24px; }
+      .memory-frame { padding: 8px; border-radius: 18px; }
+      .memory-frame img { border-radius: 12px; }
+      .memory-frame figcaption { font-size: .82rem; padding: 10px 4px 2px; }
+    }
     @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } .reveal { opacity: 1; transform: none; } }
 
     @media (max-width: 980px) {
@@ -238,7 +258,7 @@
 </a>
 <button aria-expanded="false" aria-label="Navigation öffnen" class="menu-button">☰</button>
 <nav aria-label="Hauptnavigation" class="nav-links">
-<a href="#weg">Mein Weg</a><a href="#motivation">Motivation</a><a href="#themen">Themen</a>
+<a href="#weg">Mein Weg</a><a href="#erinnerung">Erinnerung</a><a href="#motivation">Motivation</a><a href="#themen">Themen</a>
 <a href="#formate">Formate</a><a href="#belege">Belege</a><a href="#fragen">Frag Alen</a><a href="#kontakt">Kontakt</a>
 </nav>
 </div>
@@ -253,7 +273,6 @@
 <div class="hero-actions"><a class="btn btn-primary" href="#kontakt">Perspektiven-Talk anfragen</a><a class="btn btn-outline" href="#weg">Meine Geschichte</a></div>
 <p class="hero-note">Für Schulen, Jugendhäuser, Vereine und soziale Einrichtungen im Raum Lampertheim, Mannheim und Karlsruhe.</p>
 </div>
-
 </div>
 </section>
 <section class="statement"><div class="container reveal"><blockquote>„Ich bin der Beweis dafür, dass ein Hauptschulabschluss <span>nicht das Ende</span> deiner Geschichte sein muss.“</blockquote></div></section>
@@ -263,7 +282,25 @@
 <div class="timeline">
 <article class="milestone reveal"><strong>1991</strong><h3>Ankunft in Deutschland</h3><p>Als Flüchtlingskind aus Bosnien. Aufgewachsen in der Karlsruher Südstadt.</p></article><article class="milestone reveal"><strong>2002</strong><h3>Hauptschulabschluss</h3><p>An der Uhlandschule. Kein Musterschüler und noch ohne klaren Plan.</p></article><article class="milestone reveal"><strong>Ausbildung &amp; Weiterbildung</strong><h3>Erste Perspektiven</h3><p>Berufliche Erfahrungen, neue Chancen und Menschen, die an meine Entwicklung geglaubt haben.</p></article><article class="milestone reveal"><strong>2012</strong><h3>Bachelor of Science</h3><p>Bachelorabschluss in Betriebswirtschaft. Ein weiterer Schritt, der neue berufliche Möglichkeiten eröffnet hat.</p></article><article class="milestone reveal"><strong>2015</strong><h3>Master of Arts</h3><p>Masterabschluss in Human Resource Management und die Bestätigung, dass Bildung Türen öffnen kann.</p></article><article class="milestone reveal"><strong>Heute</strong><h3>Verantwortung</h3><p>Senior Manager mit internationaler Führungsverantwortung.</p></article></div>
 <div class="timeline-quote reveal">Mein Weg war nicht perfekt. Genau deshalb kann ich Jugendlichen zeigen, dass Erfolg selten geradlinig verläuft.</div>
-</div></section>
+</div></section><section class="section memory" id="erinnerung">
+<div class="container">
+<div class="eyebrow">Eine frühe Station</div>
+<h2 class="section-title">Teamgeist, Fußball und eine Erinnerung aus der Uhlandschule.</h2>
+<div class="memory-grid">
+<div class="memory-copy reveal">
+<h3>Manchmal zeigen alte Erinnerungen, wie früh ein Weg beginnt.</h3>
+<p>Dieser Zeitungsartikel stammt aus meiner Zeit an der Uhlandschule. Mit unserer Schulmannschaft spielten wir um den Pokal der Bauinnungen und qualifizierten uns für das Nordbaden-Turnier.</p>
+<p>Für mich steht dieser Ausschnitt nicht nur für Fußball, sondern auch für Teamgeist, Einsatz und die Erfahrung, gemeinsam auf ein Ziel hinzuarbeiten.</p>
+</div>
+<figure class="memory-frame reveal">
+<a href="uhlandschule-fussball-zeitung.png" rel="noopener" target="_blank">
+<img alt="Historischer Zeitungsartikel über die Schulmannschaft der Uhlandschule bei einem Fußballturnier" loading="lazy" src="uhlandschule-fussball-zeitung.png"/>
+</a>
+<figcaption>Zeitungsausschnitt aus meiner Schulzeit an der Uhlandschule. Zum Vergrößern anklicken.</figcaption>
+</figure>
+</div>
+</div>
+</section>
 <section class="section motivation" id="motivation"><div class="container motivation-single">
 <div class="reveal"><div class="eyebrow">Warum ich das mache</div><h2 class="section-title">Weil ich selbst dort stand.</h2><div class="motivation-lines"><p>Ich kenne Zweifel.</p><p>Ich kenne Rückschläge.</p><p>Ich kenne das Gefühl, wenn andere nicht an dich glauben.</p></div><div class="motivation-highlight">Dein Start bestimmt nicht dein Ziel.</div></div>
 </div></section>
