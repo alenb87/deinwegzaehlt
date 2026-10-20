@@ -223,6 +223,10 @@
     .motivation-single .section-title { max-width: 760px; }
     .motivation-single .motivation-lines { max-width: 760px; }
     .motivation-single .motivation-highlight { max-width: 760px; }
+
+    /* Hero without missing-image placeholder */
+    .hero-grid { grid-template-columns: 1fr; max-width: 920px; }
+    @media (max-width: 980px) { .hero-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -249,9 +253,7 @@
 <div class="hero-actions"><a class="btn btn-primary" href="#kontakt">Perspektiven-Talk anfragen</a><a class="btn btn-outline" href="#weg">Meine Geschichte</a></div>
 <p class="hero-note">Für Schulen, Jugendhäuser, Vereine und soziale Einrichtungen im Raum Lampertheim, Mannheim und Karlsruhe.</p>
 </div>
-<div class="hero-visual reveal">
-<img alt="Authentisches Porträt von Alen in natürlicher Umgebung" class="hero-photo" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(145deg,#e3c995,#634833)'" src="alen-hero.jpg"/>
-</div>
+
 </div>
 </section>
 <section class="statement"><div class="container reveal"><blockquote>„Ich bin der Beweis dafür, dass ein Hauptschulabschluss <span>nicht das Ende</span> deiner Geschichte sein muss.“</blockquote></div></section>
