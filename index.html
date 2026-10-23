@@ -188,6 +188,28 @@
     /* Animations */
     .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.visible { opacity: 1; transform: none; }
+    /* Wer bin ich? */
+    .about { background: var(--cream-light); }
+    .about-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 68px; align-items: center; margin-top: 46px; }
+    .about-photo { position: relative; min-height: 560px; border-radius: 38px 38px 130px 38px; overflow: hidden; background: linear-gradient(145deg, var(--gold-light), var(--brown)); box-shadow: var(--shadow); }
+    .about-photo::after { content: "Persönliches Foto folgt"; position: absolute; inset: auto 24px 24px 24px; padding: 14px 18px; border-radius: 16px; background: rgba(255,253,248,.9); color: var(--brown-deep); font-weight: 800; text-align: center; }
+    .about-photo:has(img:not([style*="display: none"]))::after { display: none; }
+    .about-photo img { width: 100%; height: 100%; min-height: 560px; object-fit: cover; position: relative; z-index: 1; }
+    .about-copy { max-width: 680px; }
+    .about-copy p { color: var(--text-soft); font-size: 1.06rem; margin-top: 18px; }
+    .about-copy strong { color: var(--brown-deep); }
+    .about-highlight { margin-top: 28px; padding: 22px 24px; border-left: 5px solid var(--gold-dark); border-radius: 0 20px 20px 0; background: var(--cream); color: var(--brown-deep); font-weight: 800; }
+    @media (max-width: 980px) {
+      .about-grid { grid-template-columns: 1fr; gap: 34px; }
+      .about-photo { min-height: 500px; max-width: 680px; width: 100%; }
+      .about-photo img { min-height: 500px; }
+    }
+    @media (max-width: 650px) {
+      .about-grid { margin-top: 32px; gap: 28px; }
+      .about-photo { min-height: 420px; border-radius: 28px 28px 90px 28px; }
+      .about-photo img { min-height: 420px; }
+      .about-copy p { font-size: 1rem; }
+    }
     /* Zeitungsartikel */
     .memory { background: var(--cream); }
     .memory-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 54px; align-items: center; margin-top: 46px; }
@@ -266,7 +288,7 @@
 </a>
 <button aria-expanded="false" aria-label="Navigation öffnen" class="menu-button">☰</button>
 <nav aria-label="Hauptnavigation" class="nav-links">
-<a href="#weg">Mein Weg</a><a href="#erinnerung">Erinnerung</a><a href="#motivation">Motivation</a><a href="#themen">Themen</a>
+<a href="#weg">Mein Weg</a><a href="#ueber-mich">Wer bin ich?</a><a href="#erinnerung">Erinnerung</a><a href="#motivation">Motivation</a><a href="#themen">Themen</a>
 <a href="#formate">Formate</a><a href="#belege">Belege</a><a href="#fragen">Frag Alen</a><a href="#kontakt">Kontakt</a>
 </nav>
 </div>
@@ -288,9 +310,28 @@
 <div class="eyebrow">Mein Weg</div><h2 class="section-title">Vom Flüchtlingskind zur Führungskraft.</h2>
 <p class="section-copy">Nicht als Hochglanz-Erfolgsgeschichte, sondern als ehrlicher Weg mit Unsicherheit, Umwegen, Rückschlägen, Entscheidungen und Menschen, die Türen geöffnet haben.</p>
 <div class="timeline">
-<article class="milestone reveal"><strong>1991</strong><h3>Ankunft in Deutschland</h3><p>Als Flüchtlingskind aus Bosnien. Aufgewachsen in der Karlsruher Südstadt.</p></article><article class="milestone reveal"><strong>2002</strong><h3>Hauptschulabschluss</h3><p>An der Uhlandschule. Kein Musterschüler und noch ohne klaren Plan.</p></article><article class="milestone reveal"><strong>Ausbildung &amp; Weiterbildung</strong><h3>Erste Perspektiven</h3><p>Berufliche Erfahrungen, neue Chancen und Menschen, die an meine Entwicklung geglaubt haben.</p></article><article class="milestone reveal"><strong>2012</strong><h3>Bachelor of Science</h3><p>Bachelorabschluss in Betriebswirtschaft. Ein weiterer Schritt, der neue berufliche Möglichkeiten eröffnet hat.</p></article><article class="milestone reveal"><strong>2015</strong><h3>Master of Arts</h3><p>Masterabschluss in Human Resource Management und die Bestätigung, dass Bildung Türen öffnen kann.</p></article><article class="milestone reveal"><strong>Heute</strong><h3>Verantwortung</h3><p>Senior Manager mit internationaler Führungsverantwortung.</p></article></div>
+<article class="milestone reveal"><strong>1992</strong><h3>Ankunft in Deutschland</h3><p>Als Flüchtlingskind aus Bosnien. Aufgewachsen in der Karlsruher Südstadt.</p></article><article class="milestone reveal"><strong>2002</strong><h3>Hauptschulabschluss</h3><p>An der Uhlandschule. Kein Musterschüler und noch ohne klaren Plan.</p></article><article class="milestone reveal"><strong>Ausbildung &amp; Weiterbildung</strong><h3>Erste Perspektiven</h3><p>Berufliche Erfahrungen, neue Chancen und Menschen, die an meine Entwicklung geglaubt haben.</p></article><article class="milestone reveal"><strong>2012</strong><h3>Bachelor of Science</h3><p>Bachelorabschluss in Betriebswirtschaft. Ein weiterer Schritt, der neue berufliche Möglichkeiten eröffnet hat.</p></article><article class="milestone reveal"><strong>2015</strong><h3>Master of Arts</h3><p>Masterabschluss in Human Resource Management und die Bestätigung, dass Bildung Türen öffnen kann.</p></article><article class="milestone reveal"><strong>Heute</strong><h3>Verantwortung</h3><p>Senior Manager mit internationaler Führungsverantwortung.</p></article></div>
 <div class="timeline-quote reveal">Mein Weg war nicht perfekt. Genau deshalb kann ich Jugendlichen zeigen, dass Erfolg selten geradlinig verläuft.</div>
-</div></section><section class="section memory" id="erinnerung">
+</div></section>
+<section class="section about" id="ueber-mich">
+<div class="container">
+<div class="eyebrow">Wer bin ich?</div>
+<h2 class="section-title">Der Mensch hinter „Dein Weg zählt“.</h2>
+<div class="about-grid">
+<figure class="about-photo reveal">
+<img src="alen-bosnjak.jpg" alt="Porträt von Alen Bosnjak" loading="lazy" onerror="this.style.display='none'"/>
+</figure>
+<div class="about-copy reveal">
+<p>Ich bin Alen Bosnjak, Jahrgang 1987, geboren in Mostar in Bosnien und Herzegowina. Als Kind kam ich mit meiner Familie nach Karlsruhe und bin in der Südstadt aufgewachsen. Zu meiner Geschichte gehört auch mein Zwillingsbruder, mit dem ich viele dieser ersten Jahre und Erfahrungen geteilt habe.</p>
+<p>Heute liegt mein Lebensmittelpunkt in Lampertheim. Mit Karlsruhe bin ich aber weiterhin eng verbunden und regelmäßig dort, denn viele meiner sozialen Kontakte sind bis heute in der Stadt. Diese Verbindung und die Menschen dort sind für mich ein wichtiger Teil meines Lebens. Ich habe zwei Kinder und lebe mit meiner Partnerin zusammen. Familie ist für mich ein wichtiger Teil meines Lebens und hat meinen Blick auf Verantwortung, Chancen und Zukunft noch einmal verändert.</p>
+<p>Eine Konstante begleitet mich dabei schon fast mein ganzes Leben: <strong>Fußball</strong>. Früher wollte ich selbst Fußballprofi werden. Heute stehe ich immer noch regelmäßig auf dem Platz. Ich spiele bei den Alten Herren des VfB Lampertheim und in der zweiten Mannschaft von Olympia Lampertheim.</p>
+<p>Daneben gehören <strong>Sport und Fitness</strong> zu meinem Alltag. Gleichzeitig beschäftige ich mich viel mit <strong>Technologie, Digitalisierung und künstlicher Intelligenz</strong>. Mich interessiert vor allem, wie technologische Entwicklungen Menschen unterstützen und neue Möglichkeiten schaffen können.</p>
+<div class="about-highlight">Bei „Dein Weg zählt“ möchte ich diese verschiedenen Seiten zusammenbringen: meine Herkunft, meinen Bildungsweg, meine beruflichen Erfahrungen, Familie, Sport und die Umwege dazwischen. Denn am Ende besteht ein Lebensweg aus mehr als Schulabschlüssen und Berufsbezeichnungen.</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section memory" id="erinnerung">
 <div class="container">
 <div class="eyebrow">Eine frühe Station</div>
 <h2 class="section-title">Teamgeist, Fußball und eine Erinnerung aus der Uhlandschule.</h2>
@@ -362,7 +403,7 @@
 </main>
 <footer><div class="container"><div class="footer-grid">
 <div><div class="footer-brand"><img alt="Logo Dein Weg zählt" src="logo.png"/><span>DEIN WEG ZÄHLT</span></div><p style="margin-top:16px;max-width:420px">Dein Start bestimmt nicht dein Ziel. Perspektiven, Chancen und Zukunft für Jugendliche.</p></div>
-<div><h3>Website</h3><a href="#weg">Mein Weg</a><a href="#themen">Themen</a><a href="#formate">Formate</a><a href="#belege">Belege</a><a href="#kontakt">Kontakt</a><a href="https://www.linkedin.com/in/alen-b-b0ba61b8/" rel="noopener noreferrer" target="_blank">LinkedIn</a></div>
+<div><h3>Website</h3><a href="#weg">Mein Weg</a><a href="#ueber-mich">Wer bin ich?</a><a href="#themen">Themen</a><a href="#formate">Formate</a><a href="#belege">Belege</a><a href="#kontakt">Kontakt</a><a href="https://www.linkedin.com/in/alen-b-b0ba61b8/" rel="noopener noreferrer" target="_blank">LinkedIn</a></div>
 <div><h3>Rechtliches</h3><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
 </div><div class="copyright">© 2026 Dein Weg zählt · Alen Bosnjak</div></div></footer>
 <script>
