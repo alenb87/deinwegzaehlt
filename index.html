@@ -154,6 +154,8 @@
     .offer li::before { content: "✓"; margin-right: 10px; color: var(--gold-light); font-weight: 950; }
     .featured li::before { color: var(--brown-deep); }
     .build-note { margin-top: 28px; color: rgba(255,255,255,.75); }
+    .protection-note { margin-top: 18px; padding: 20px 22px; border-radius: 18px; background: rgba(255,255,255,.08); color: rgba(255,255,255,.9); }
+    .protection-note strong { color: var(--gold-light); }
 
     /* Belege */
     .proofs { background: var(--cream-light); }
@@ -248,7 +250,8 @@
       .photo-placeholder { min-height: 0; width: fit-content; max-width: 82vw; padding: 10px; background: var(--cream-light); box-shadow: 0 10px 28px rgba(61,36,24,.08); border-radius: 20px; margin: 0 auto; }
       .photo-placeholder img.motivation-logo { width: min(64vw, 260px); padding: 0; background: transparent; margin: 0 auto; }
       .cards, .offer-grid, .proof-grid { grid-template-columns: 1fr; }
-  
+    }
+
     .offer .btn { align-self: flex-start; margin-top: auto; }
 
     /* Motivation section without visual placeholder */
@@ -259,7 +262,6 @@
 
     /* Hero without missing-image placeholder */
     .hero-grid { grid-template-columns: 1fr; max-width: 920px; }
-    @media (max-width: 980px) { .hero-grid { grid-template-columns: 1fr; } }
 
 </style>
 </head>
@@ -336,6 +338,7 @@
 </div>
 <p class="build-note"><strong>Kostenfrei und gemeinwohlorientiert:</strong> Das Angebot verfolgt keinen kommerziellen Zweck. Im Mittelpunkt stehen echte Begegnungen, Perspektiven für Jugendliche, Erfahrungen und Feedback.</p>
 <p class="build-note"><strong>Hinweis zur Verfügbarkeit:</strong> „Dein Weg zählt“ ist eine persönliche, ehrenamtlich ausgerichtete Initiative, die ich neben meiner hauptberuflichen Tätigkeit betreibe. Termine sind daher nur nach individueller Abstimmung und abhängig von meiner zeitlichen Verfügbarkeit möglich. Die Durchführung erfolgt grundsätzlich außerhalb meiner regulären Arbeitszeit.</p>
+<p class="protection-note"><strong>Organisatorischer Rahmen und Schutz Minderjähriger:</strong> Anfragen und Terminabstimmungen erfolgen grundsätzlich über Schulen, Jugendhäuser, Vereine, soziale Einrichtungen oder andere verantwortliche Ansprechpersonen. Bei Veranstaltungen mit Minderjährigen bleibt die jeweilige Einrichtung für den organisatorischen Rahmen und die Aufsicht verantwortlich. Das Angebot ist als Bildungs- und Erfahrungsformat angelegt; direkte Einzelberatungen für Minderjährige sowie psychologische, therapeutische, rechtliche oder individuelle Berufsberatung sind nicht Bestandteil des Angebots.</p>
 </div></section>
 <section class="section proofs" id="belege"><div class="container">
 <div class="eyebrow">Mein Bildungsweg</div><h2 class="section-title">Stationen, die meinen Weg belegen.</h2>
@@ -362,7 +365,7 @@
 </div>
 </div></section>
 <section class="section contact" id="kontakt"><div class="container contact-box">
-<div><div class="eyebrow">Kontakt</div><h2 class="section-title">Lass uns Jugendlichen Perspektiven geben.</h2><p class="section-copy">Du möchtest im Raum Lampertheim, Mannheim oder Karlsruhe einen Perspektiven-Talk oder eine Gesprächsrunde organisieren? Schreib mir gerne unverbindlich. Ob und wann ein Termin möglich ist, klären wir anschließend individuell.</p></div>
+<div><div class="eyebrow">Kontakt</div><h2 class="section-title">Lass uns Jugendlichen Perspektiven geben.</h2><p class="section-copy">Du möchtest im Raum Lampertheim, Mannheim oder Karlsruhe einen Perspektiven-Talk oder eine Gesprächsrunde organisieren? Anfragen und Terminabstimmungen erfolgen über eine verantwortliche Ansprechperson der jeweiligen Einrichtung. Schreib mir gerne unverbindlich. Ob und wann ein Termin möglich ist, klären wir anschließend individuell.</p></div>
 <aside class="contact-actions"><h3>Unkompliziert Kontakt aufnehmen</h3><p>Das Angebot ist kostenfrei und gemeinwohlorientiert und verfolgt keinen kommerziellen Zweck. Der E-Mail-Button öffnet dein E-Mail-Programm.</p><a class="btn btn-primary" href="mailto:alen-87@hotmail.de?subject=Anfrage%20Dein%20Weg%20z%C3%A4hlt">E-Mail schreiben</a><a class="btn btn-outline" href="https://www.linkedin.com/in/alen-b-b0ba61b8/" rel="noopener noreferrer" target="_blank">LinkedIn-Profil öffnen</a></aside>
 </div></section>
 </main>
